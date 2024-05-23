@@ -1,0 +1,105 @@
+*{
+    font-family: "Comfortaa", sans-serif;
+}
+/* Глобальные стили */
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #dadada;
+}
+
+body{
+    background-color: #464646;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+/* ------------------------------------------------------------------------ */
+/* HEADER style */
+
+header {
+    background: #008484;
+    height: 70px;
+}
+
+header * {
+    color: #fff;
+}
+
+header h1 {
+    margin-top: 3px;
+    white-space: nowrap;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li a {
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+header ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #008484;
+}
+
+header ul li:hover ul {
+    display: block;
+    background-color: #007373; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+header ul li ul li {
+    float: none;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+}
+
+header ul li a:hover {
+    background: #006669;
+    transition: 0.5s;
+    color: #ffff;
+}
+/* Новые стили */
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+header .col-4 {
+    flex: 0 0 auto;
+}
+
+header .col-8 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
