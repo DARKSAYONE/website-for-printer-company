@@ -88,7 +88,7 @@ header ul li a:hover {
     transition: 0.5s;
     color: #ffff;
 }
-/* Новые стили */
+
 header .container {
     display: flex;
     align-items: center;
@@ -103,6 +103,7 @@ header .col-8 {
     display: flex;
     justify-content: flex-end;
 }
+/* --------------------------------------- */
 
 /* SLIDER */
 .slider-title{
@@ -137,3 +138,92 @@ header .col-8 {
     width: 100%;
 }
 /* ------------------------ */
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 200px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 150px;
+    height: auto; 
+}
+
+.footer-rating {
+    background-color: #ffd700;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right p {
+    margin: 20px;
+}
+
+.footer-center a {
+    color: #000;
+    text-decoration: none;
+}
+
+.footer-center a:hover {
+    text-decoration: underline;
+}
+
+.footer-phone-icon,
+.footer-email-icon {
+    margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-center {
+        text-align: left;
+    }
+}
+
+/* Увеличенные отступы */
+footer p {
+    margin-bottom: 15px; /* Увеличиваем нижний отступ у всех абзацев в футере */
+}
+
+footer a {
+    margin-bottom: 15px; /* Увеличиваем нижний отступ у всех ссылок в футере */
+}
+
+footer {
+    padding: 40px 0; /* Увеличиваем верхний и нижний отступы у футера */
+}
+/* --------------------------------- */
