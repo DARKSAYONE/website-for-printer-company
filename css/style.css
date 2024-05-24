@@ -209,16 +209,18 @@ footer {
 }
 
 .footer-adminlogin {
-    position: fixed;
-    bottom: 10px;
+    position: relative;
+    text-align:center;
+    bottom: 100px;
     right: 10px;
     background-color: transparent; /* прозрачный фон, если нужно */
     padding: 5px; /* отступы вокруг текста */
+    margin-left:155px;
     display: inline-block; /* чтобы блок занимал только нужную ширину */
 }
 
 .footer-adminlogin a {
-    color: #ff0d0d !important;  /* серый цвет для невыделяющегося вида */
+    color: #8d8d8d !important;  /* серый цвет для невыделяющегося вида */
     text-decoration: none;
     font-size: 0.9rem; /* немного меньший размер текста */
 }
@@ -230,5 +232,19 @@ footer {
 /* Увеличенные отступы */
 footer p,
 footer a {
-    text-align: bottom;
+    text-align: center;
 }
+
+
+/* Main content */
+.main-content h2{
+    margin: 30px 10px !important;
+    padding: 10px;
+    background: #f8f8f8;
+}
+
+.main-content {
+background: floralwhite;
+margin-top: 50px;
+}
+/* -------------------------------------------------- */
