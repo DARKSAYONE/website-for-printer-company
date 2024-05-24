@@ -1,6 +1,12 @@
 *{
     font-family: "Comfortaa", sans-serif;
 }
+/* 
+Палитра
+
+#ff8800 - фон
+#be6704 - второстепенный цвет.
+*/
 /* Глобальные стили */
 html,
 h1,
@@ -9,11 +15,11 @@ h3,
 h4,
 h5,
 h6 {
-    color: #dadada;
+    color: #999999;
 }
 
 body{
-    background-color: #464646;
+    background-color: #e4e4e4;
 }
 
 a{
@@ -25,7 +31,7 @@ a{
 /* HEADER style */
 
 header {
-    background: #008484;
+    background: #ff8800;
     height: 70px;
 }
 
@@ -34,7 +40,7 @@ header * {
 }
 
 header h1 {
-    margin-top: 3px;
+    margin-top: 8px;
     white-space: nowrap;
 }
 
@@ -66,12 +72,12 @@ header ul li ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    background: #008484;
+    background: #be6704;
 }
 
 header ul li:hover ul {
     display: block;
-    background-color: #007373; /* Цвет фона при наведении */
+    background-color: #be6704; /* Цвет фона при наведении */
     color: #fff; /* Цвет текста при наведении */
 }
 
@@ -84,7 +90,7 @@ header ul li ul li a {
 }
 
 header ul li a:hover {
-    background: #006669;
+    background: #be6704;
     transition: 0.5s;
     color: #ffff;
 }
@@ -120,10 +126,10 @@ header .col-8 {
 }
 
 .carousel-caption h5,p{
-    background: rgba(255, 255, 255, 0.822);
+    background: #ff88008c;
     max-width: 100%;
     padding: 0.7em;
-    color: #000000;
+    color: #ffffff;
 }
 
 .carousel-caption-my{
@@ -140,7 +146,7 @@ header .col-8 {
 /* ------------------------ */
 /* Footer */
 footer {
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     padding: 40px 0; /* Увеличенные отступы */
     border-top: 1px solid #ddd;
     margin-top: 200px;
@@ -217,12 +223,15 @@ footer {
     padding: 5px; /* отступы вокруг текста */
     margin-left:155px;
     display: inline-block; /* чтобы блок занимал только нужную ширину */
+    background: none !important;
 }
 
 .footer-adminlogin a {
-    color: #8d8d8d !important;  /* серый цвет для невыделяющегося вида */
+    color: #ffffff !important;  /* серый цвет для невыделяющегося вида */
     text-decoration: none;
     font-size: 0.9rem; /* немного меньший размер текста */
+    background-color: none !important;
+    padding: 5px;
 }
 
 .footer-adminlogin a:hover {
@@ -233,6 +242,7 @@ footer {
 footer p,
 footer a {
     text-align: center;
+    background: #ff8800;
 }
 
 
@@ -240,11 +250,37 @@ footer a {
 .main-content h2{
     margin: 30px 10px !important;
     padding: 10px;
-    background: #f8f8f8;
+    background: #ff9100;
+    color: #f8f8f8;
 }
 
 .main-content {
-background: floralwhite;
+background: rgb(255, 255, 255);
 margin-top: 50px;
+}
+/* -------------------------------------------------- */
+/* О нас контент */
+
+/* -------------------------------------------------- */
+
+/* Форма реистрации */
+.reg_form h2{
+    color: black;
+    text-align: center;
+    margin: 30px 0;
+}
+.reg_form h4{
+    text-align: center;
+    color:black;
+    margin-top: 25px;
+}
+.reg_form a{
+    text-align: center;
+    color: #ff8800;
+}
+
+.reg_form a:hover{
+    margin-left: 55px;
+    transition: all .3s;
 }
 /* -------------------------------------------------- */
