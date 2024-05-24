@@ -1,3 +1,4 @@
+<?php include("path.php");?>
 <!doctype html>
 <html lang="ru">
   <head>
@@ -15,24 +16,9 @@
     <link rel="stylesheet" href="source/css/style.css">
   </head>
   <body>
-<header class="container-fluid">
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <h1>Цифровая Типография</h1>
-            </div>
-            <nav class="col-8">
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Портфолио</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+<!-- header -->
+
+<?php include("app/include/header.php"); ?>
 
 <!-- Блок карусели -->
 <div class="container">
@@ -127,29 +113,7 @@
 
 
 <!-- Footer -->
-<footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-left">
-                <p>Минеральные Воды</p>
-                <p>ул. Пушкина, Колотушкина</p>
-            </div>
-            <div class="footer-center">
-                <img src="source/img/logo.png" alt="Цифровая Типография" class="footer-logo">
-                <p>Сайт носит информационный характер и не является публичной офертой</p>
-                <p>2024 ИП "Name".</p>
-            </div>
-            <div class="footer-right">
-                <p><a href="tel:8005000691">8 (800) 535345</a> <span class="footer-phone-icon">📞</span></p>
-                <p><a href="mailto:partner@optpoligraf.ru">partner@optpoligraf.ru</a> <span class="footer-email-icon">✉️</span></p>
-            </div>
-        </div>
-        <div class="footer-adminlogin">
-            <a href="login.html">Панель</a>
-        </div>
-    </div>
-</footer>
-
+<?php include("app/include/footer.php"); ?>
 <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
