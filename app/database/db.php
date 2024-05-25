@@ -47,8 +47,6 @@ function selectAll($table,$params = []){
 
     return $query->fetchAll();
 }
-
-
 //Запрос на получение одной строки с таблицы.
 function selectOne($table,$params = []){
 
@@ -86,3 +84,38 @@ $params = [
 
 //tt(selectAll('user',$params));
 tt(selectOne('user'));
+
+//Запись в таблицу.
+function Insert($table, $parameters){
+    global $pdo;
+    $i = 0;
+    $col = '';
+    $mask ='';
+    foreach($parameters as $key => $value){
+        if($i === 0){
+            $col = $col . $key;
+            $mask = $mask ."'". $value."'";
+        }
+        else{
+        $col = $col . ", $key";
+        $mask = $mask . ", '"."$value" . "'";
+        }
+        $i++;
+    }
+    $sql = "INSERT INTO $table ($col) VALUES ($mask)";
+    tt($sql);
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckErr($query);
+}
+
+
+$arrData = [ 
+    'admin' => 1,
+    'username' => 'test00004',
+    'email' => 'test20004@test.ru',
+    'pass' => '111111114'
+];
+Insert('user', $arrData);
