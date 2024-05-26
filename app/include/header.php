@@ -10,6 +10,13 @@
                     <li><a href="<?php echo BASE_URL. 'about.php'?>">О нас</a></li>
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">Портфолио</a></li>
+
+
+                    <li>
+                        <?php if($_SESSION['admin']): ?>
+                        <a href="#">Администрирование</a>
+                    </li>
+                    <?php endif; ?>
                     
                 </ul>
             </nav>

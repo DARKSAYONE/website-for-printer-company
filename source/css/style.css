@@ -285,7 +285,7 @@ margin-top: 50px;
 }
 
 .reg_form div.err p{
-    color:red;
+    color:rgb(255, 166, 0);
     background:none;
     text-align: center;
 }

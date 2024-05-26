@@ -12,6 +12,8 @@ $errMsg = ' ';
         $pass = trim($_POST['pass']);
         $passRepeat = trim($_POST['passrepeat']);
 
+        
+
         if($username === '' || $email === '' || $pass === '' || $passRepeat === ''){
             $errMsg = " Не все поля заполнены.";
 
@@ -22,22 +24,35 @@ $errMsg = ' ';
             $errMsg = "Пароли должны совпадать";
         }
         else{
+            $existence = selectOne('user', ['email' => $email]);
+            if (!empty($existence['email']) && $existence['email'] === $email){
+                $errMsg = "Пользователь с таким email уже существует";
+            }
+            else{
             $pass = password_hash($pass, PASSWORD_DEFAULT);
-        $post = [
+            $post = [
             'admin' => $admin,
             'username' => $username,
             'email' => $email,
             'pass' => $pass
-    
-        ];
-    // $id = Insert('user',$post);
-        $isSubmit = true;
-        tt($post);
-        }
-    // $last_row = selectOne('user', ['id' => $id]);
+            ];
+            
+       $id = Insert('user',$post);
+       $user = selectOne('user', ['id' => $id]);
+       
+       $_SESSION['id'] = $user['id'];
+       $_SESSION['name'] = $user['username'];
+       $_SESSION['admin'] = $user['admin'];
+
+       if($_SESSION['admin']){
+        
+       }
+       header('location: '. BASE_URL);
+
     }
-    else{
-        echo 'GET';
+}
+    }else{
+        //echo 'GET';
     }
 
  
