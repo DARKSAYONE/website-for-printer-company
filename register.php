@@ -1,7 +1,6 @@
 <?php 
   include("path.php");
   include("app/controllers/userAuth.php");
-  include("app/database/db.php");
 ?>
 
 <!doctype html>

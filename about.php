@@ -1,5 +1,4 @@
-<?php include("path.php");
-include("app/database/db.php");?>
+<?php include("path.php");?>
 <!doctype html>
 <html lang="ru">
   <head>
