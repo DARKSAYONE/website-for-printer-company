@@ -283,4 +283,10 @@ margin-top: 50px;
     margin-left: 55px;
     transition: all .3s;
 }
+
+.reg_form div.err p{
+    color:red;
+    background:none;
+    text-align: center;
+}
 /* -------------------------------------------------- */

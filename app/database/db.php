@@ -77,13 +77,11 @@ function selectOne($table,$params = []){
 
     return $query->fetch();
 }
-$params = [
-    'admin' => 1,
-    'username' => 'Operator'
-];
+// $params = [
+//     'admin' => 1,
+//     'username' => 'Operator'
+// ];
 
-//tt(selectAll('user',$params));
-tt(selectOne('user'));
 
 //Запись в таблицу.
 function Insert($table, $parameters){
@@ -109,16 +107,16 @@ function Insert($table, $parameters){
     $query->execute();
 
     dbCheckErr($query);
+    return $pdo->lastInsertId();
 }
 
+// $arrData = [ 
+//     'admin' => 1,
+//     'username' => 'test00004',
+//     'email' => 'test20004@test.ru',
+//     'pass' => '111111114'
+// ];
 
-$arrData = [ 
-    'admin' => 1,
-    'username' => 'test00004',
-    'email' => 'test20004@test.ru',
-    'pass' => '111111114'
-];
-//Insert('user', $arrData);
 
 
 //Обновление строки в таблице
@@ -145,14 +143,10 @@ function UpdateDB($table, $id , $parameters){
     dbCheckErr($query);
 }
 
-$ParamUpdate = [
-    'admin' => '0',
-    'pass' => 228
-];
-
-
-// UpdateDB('user',8,$ParamUpdate);
-
+// $ParamUpdate = [
+//     'admin' => '0',
+//     'pass' => 228
+// ];
 
 //Функция удаления.
 function DeleteFromDB($table, $id){
@@ -167,3 +161,5 @@ function DeleteFromDB($table, $id){
 
     dbCheckErr($query);
 }
+// UpdateDB('user',8,$ParamUpdate);
+//Insert('user', $arrData);

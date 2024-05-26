@@ -1,4 +1,8 @@
-<?php include("path.php");?>
+<?php 
+  include("path.php");
+  include("app/controllers/userAuth.php");
+?>
+
 <!doctype html>
 <html lang="ru">
   <head>
@@ -24,31 +28,34 @@
 
 <!-- REG FORM -->
 <div class="container reg_form">
-<form class="row justify-content-center" method="post" action="register.html">
+<form class="row justify-content-center" method="post" action="register.php">
     <h2>Заполните поля</h2>
+    <div class="err">
+      <p><?= $errMsg ?></p>
+    </div>
     <div class="mb-3 col-12 col-md-4">
-        <label for="formGroupExampleInput" class="form-label">Ваш логин</label>
-        <input type="text" class="form-control" id="formGroupExampleInput">
+        <label for="formGroupExampleInput" class="form-label">Ваше имя</label>
+        <input name="username" type="text" class="form-control" id="formGroupExampleInput">
       </div>
       <div class="w-100"></div>
     <div class="mb-3 col-12 col-md-4">
       <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="w-100"></div>
     <div class="mb-3 col-12 col-md-4">
       <label for="exampleInputPassword1" class="form-label">Пароль</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+      <input name="pass" type="password" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="w-100"></div>
     <div class="mb-3 col-12 col-md-4">
         <label for="exampleInputPassword2" class="form-label">Повторите пароль</label>
-        <input type="password" class="form-control" id="exampleInputPassword2">
+        <input name="passrepeat" type="password" class="form-control" id="exampleInputPassword2">
       </div>
       <div class="w-100"></div>
       <div class="col-12 col-md-4">
-      <button type="submit" class="btn btn-success">Отправить</button>
+      <button type="submit" class="btn btn-success" name="button-reg">Отправить</button>
       <div class="col-12 col-md-4"></div>
       <h4>Уже есть доступ? <a href="login.php">Авторизируйтесь</a></h4>
        </div>
