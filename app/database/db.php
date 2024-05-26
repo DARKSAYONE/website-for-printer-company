@@ -103,7 +103,7 @@ function Insert($table, $parameters){
         $i++;
     }
     $sql = "INSERT INTO $table ($col) VALUES ($mask)";
-    tt($sql);
+    // tt($sql);
 
     $query = $pdo->prepare($sql);
     $query->execute();
@@ -118,4 +118,52 @@ $arrData = [
     'email' => 'test20004@test.ru',
     'pass' => '111111114'
 ];
-Insert('user', $arrData);
+//Insert('user', $arrData);
+
+
+//Обновление строки в таблице
+function UpdateDB($table, $id , $parameters){
+    global $pdo;
+    $i = 0;
+    $str = '';
+    foreach($parameters as $key => $value){
+        if($i === 0){
+            $str = $str .$key ." = '".  $value."'";
+        }
+        else{
+            $str = $str .",". $key ." = '". $value."'";
+        }
+        $i++;
+    }
+    $sql = "UPDATE $table SET $str WHERE id = $id";
+    // tt($sql);
+    // exit;
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckErr($query);
+}
+
+$ParamUpdate = [
+    'admin' => '0',
+    'pass' => 228
+];
+
+
+// UpdateDB('user',8,$ParamUpdate);
+
+
+//Функция удаления.
+function DeleteFromDB($table, $id){
+    global $pdo;
+
+    $sql = "DELETE FROM $table WHERE id = $id";
+    // tt($sql);
+    // exit;
+
+    $query = $pdo->prepare($sql);
+    $query->execute();
+
+    dbCheckErr($query);
+}
