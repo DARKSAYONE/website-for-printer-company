@@ -1,0 +1,83 @@
+/* HEADER style */
+
+header {
+    background: #ff8800;
+    height: 70px;
+}
+
+header * {
+    color: #fff;
+}
+
+header h1 {
+    margin-top: 8px;
+    white-space: nowrap;
+    font-size: 20px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: right;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li a {
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+
+header ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #be6704;
+}
+
+header ul li:hover ul {
+    display: block;
+    background-color: #be6704; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+
+header ul li ul li {
+    float: none;
+}
+
+header ul li ul li a {
+    padding: 10px 20px;
+}
+
+header ul li a:hover {
+    background: #be6704;
+    transition: 0.5s;
+    color: #ffff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+header .col-4 {
+    flex: 0 0 auto;
+}
+
+header .col-8 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+/* --------------------------------------- */

@@ -1,0 +1,80 @@
+<?php 
+include("../../path.php");
+include("../../app/database/db.php");
+?>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная Администратор</title>
+    
+    <!-- Подключение bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Подключение google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="../../source/css/style.css">
+    <link rel="stylesheet" href="../../source/css/admin.css">
+  </head>
+  <body>
+<!-- header -->
+
+<?php include("../../app/include/admheader.php"); ?>
+
+<!-- Блок карусели -->
+
+<!-- Блок карусели -->
+<!-- Блок мейн -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="sidebar col-4">
+            <ul>
+                <li>
+                    <a href=>Портфолио</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="portfolio col-8">
+            <div class="row">
+                <div class ="id col-1">ID</div>
+                <div class="title col-5">Название</div>
+                <div class="edit col-5">Редактировать</div>
+                <div class="del col-5">Удалить</div>
+            </div>
+            <div class="portfolio col-8">
+            <div class="row post">
+                <div class ="id col-1">1</div>
+                <div class="title col-5">Placeholder</div>
+                <div class="edit col-5"><a href="#">edit</a></div>
+                <div class="del col-5"><a href="#">Delete</a></div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- Блок мейн -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<?php include("../../app/include/footer.php"); ?>
+<!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
