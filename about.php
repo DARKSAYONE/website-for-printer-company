@@ -22,34 +22,66 @@
 
 
 <!-- Блок мейн -->
-<div class="container">
-    <div class="container row">
-        <div class="main-content col-md-12">
-        <h2>Название</h2>
-        <div class="about_post row">
-            <div class="img col-12">
-                <img src="source/img/kniga.webp" alt="" class="img-thumbnail">
-            </div>
-            <div class="aobut_post_text col-12 col-md-8">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, doloremque, distinctio sequi repudiandae voluptates magnam illo eos enim perferendis, accusamus nam ullam incidunt vitae magni iure modi animi consequatur? Obcaecati!</h3>
-            </div>
-        </div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Приветственное сообщение -->
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4">Добро пожаловать!</h1>
+            <p class="lead">Мы рады приветствовать вас на нашей странице. Узнайте больше о нас и наших работах.</p>
         </div>
     </div>
-</div>
-
+    
+    <!-- Информация о компании -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h2>О компании</h2>
+            <p>Наша компания занимается предоставлением высококачественных услуг в области типографии. Мы стремимся к постоянному совершенствованию и внедрению новейших технологий для обеспечения максимального удовлетворения потребностей наших клиентов.</p>
+        </div>
+        <div class="col-md-6">
+            <img src="path/to/your/image.jpg" class="img-fluid" alt="О компании">
+        </div>
+    </div>
+    
+    <!-- Примеры работ -->
+    <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+            <h2>Примеры наших работ</h2>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="path/to/example_work1.jpg" class="card-img-top" alt="Работа 1">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Работа 1</h5>
+                    <p class="card-text">Описание работы 1.</p>
+                    <a href="portfolio.php" class="btn btn-primary">Смотреть больше</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="path/to/example_work2.jpg" class="card-img-top" alt="Работа 2">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Работа 2</h5>
+                    <p class="card-text">Описание работы 2.</p>
+                    <a href="portfolio.php" class="btn btn-primary">Смотреть больше</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="path/to/example_work3.jpg" class="card-img-top" alt="Работа 3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Работа 3</h5>
+                    <p class="card-text">Описание работы 3.</p>
+                    <a href="portfolio.php" class="btn btn-primary">Смотреть больше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>>
+    
+   
 <!-- Блок мейн -->
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- Footer -->
 <?php include("app/include/footer.php"); ?>

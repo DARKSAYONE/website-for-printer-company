@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #999999;
+    color: #000000;
 }
 
 body{
@@ -90,7 +90,7 @@ header ul li ul li a {
 }
 
 header ul li a:hover {
-    background: #be6704;
+    background: #e67c03;
     transition: 0.5s;
     color: #ffff;
 }
@@ -126,7 +126,7 @@ header .col-8 {
 }
 
 .carousel-caption h5,p{
-    background: #ff88008c;
+    background: #ff8800d7;
     max-width: 100%;
     padding: 0.7em;
     color: #ffffff;
