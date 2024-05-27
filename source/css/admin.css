@@ -81,3 +81,11 @@ header .col-8 {
     justify-content: flex-end;
 }
 /* --------------------------------------- */
+
+.editpanel{
+    margin-top: 40px;
+}
+
+.button-group{
+    margin-bottom: 40px;
+}

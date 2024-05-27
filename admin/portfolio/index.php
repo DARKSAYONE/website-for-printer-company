@@ -23,57 +23,63 @@ include("../../app/database/db.php");
 <!-- header -->
 
 <?php include("../../app/include/admheader.php"); ?>
-
-<!-- Блок карусели -->
-
-<!-- Блок карусели -->
-<!-- Блок мейн -->
-<!-- <div class="container">
-    <div class="row">
-        <div class="sidebar col-4">
-            <ul>
-                <li>
-                    <a href=>Портфолио</a>
-                </li>
-            </ul>
-
-        </div>
-        <div class="portfolio col-8">
-            <div class="row">
-                <div class ="id col-1">ID</div>
-                <div class="title col-5">Название</div>
-                <div class="edit col-5">Редактировать</div>
-                <div class="del col-5">Удалить</div>
+ <!-- Main -->
+ <div class="container-fluid editpanel">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="<?php echo BASE_URL . '/admin/dashboard.php'; ?>">Главная</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="<?php echo BASE_URL . '/admin/users/index.php'; ?>">Пользователи</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="<?php echo BASE_URL . '/admin/posts/index.php'; ?>">Посты</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="<?php echo BASE_URL . '/admin/portfolio/index.php'; ?>">Портфолио</a>
+                    </li>
+                </ul>
             </div>
-            <div class="portfolio col-8">
-            <div class="row post">
-                <div class ="id col-1">1</div>
-                <div class="title col-5">Placeholder</div>
-                <div class="edit col-5"><a href="#">edit</a></div>
-                <div class="del col-5"><a href="#">Delete</a></div>
+            <!-- Main content -->
+            <div class="col-md-9">
+                <div class="button-group">
+                    <a href="create.php" class="btn btn-success">Добавить пост</a>
+                    <a href="index.php" class="btn btn-primary">Управление постами</a>
+                </div>
+                <h2 class="page-title">Управление портфолио</h2>
+                
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Текст</th>
+                            <th scope="col">Изображение</th>
+                            <th scope="col">Дата создания</th>
+                            <th scope="col" colspan="2">Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $posts = selectAll('posts');
+                        foreach ($posts as $key => $post): ?>
+                            <tr>
+                                <th scope="row"><?php echo $key + 1; ?></th>
+                                <td><?php echo substr($post['text'], 0, 50) . '...'; ?></td>
+                                <td><img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" width="100"></td>
+                                <td><?php echo date('d-m-Y', strtotime($post['created_at'])); ?></td>
+                                <td><a href="edit.php?id=<?php echo $post['id']; ?>" class="btn btn-warning">Редактировать</a></td>
+                                <td><a href="delete.php?id=<?php echo $post['id']; ?>" class="btn btn-danger">Удалить</a></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</div> -->
-
-
-
-<!-- Блок мейн -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Footer -->
-<?php include("../../app/include/footer.php"); ?>
-<!-- Footer -->
+    <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
