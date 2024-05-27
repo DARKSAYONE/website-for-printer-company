@@ -15,8 +15,14 @@
                 <p><a href="mailto:partner@optpoligraf.ru">partner@optpoligraf.ru</a> <span class="footer-email-icon">✉️</span></p>
             </div>
         </div>
-        <div class="footer-adminlogin">
-            <a href="login.php">Панель</a>
-        </div>
+        <?php if(!isset($_SESSION['id'])): ?>
+    <div class="footer-adminlogin">
+        <a href="login.php">Панель</a>
+    </div>
+<?php else: ?>
+    <div class="footer-adminlogin">
+        <a href="logout.php">Выход</a>
+    </div>
+<?php endif; ?>
     </div>
 </footer>

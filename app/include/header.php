@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <header class="container-fluid">
     <div class="container">
@@ -13,14 +12,14 @@
                     <li><a href="<?php echo BASE_URL. 'about.php'?>">О нас</a></li>
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">Портфолио</a></li>
-                    <?php if(isset($_SESSION['id'])): ?>
+                    <!-- <?php if(isset($_SESSION['id'])): ?>
                     <li><p><?php echo $_SESSION['name']; ?></p>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
 
                     <?php if(isset($_SESSION['id'])): ?>    
                     <li>
                         <?php if($_SESSION['admin'] == 1): ?>
-                        <a href="#">Администрирование</a>
+                        <a href="admin/admin.php">Администрирование</a>
                     </li>
                     <?php endif; ?>
                     <?php endif; ?>

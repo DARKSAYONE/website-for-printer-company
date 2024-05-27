@@ -3,9 +3,8 @@
 
 $isSubmit = false;
 $errMsg = ' ';
-
-    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-
+//Регистрация
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-reg'])){
         $admin = 0;
         $username = trim($_POST['username']);
         $email = trim($_POST['email']);
@@ -49,10 +48,35 @@ $errMsg = ' ';
     }
 }
     }else{
-        //echo 'GET';
+        $email = '';
+        $username = '';
     }
 
- 
+if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
+    echo 'Форма лога';
+    $email = trim($_POST['email']);
+    $pass = trim($_POST['pass']);
+
+    if($email === '' || $pass === ''){
+        $errMsg = " Не все поля заполнены.";
+    }else{
+    $existence = selectOne('user', ['email' => $email]);
+    if($existence && password_verify($pass,$existence['pass'])){
+        $_SESSION['id'] = $existence['id'];
+        $_SESSION['name'] = $existence['username'];
+        $_SESSION['admin'] = $existence['admin'];
+        header('location: '. BASE_URL);
+    }else{
+        $errMsg = "Проверьте введенные вами данные";
+
+    }
+}
+}
+else{
+    $email = '';
+    $username = '';
+}
+
 
     // tt($last_row);
   
