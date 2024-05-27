@@ -19,7 +19,7 @@
                     <?php if(isset($_SESSION['id'])): ?>    
                     <li>
                         <?php if($_SESSION['admin'] == 1): ?>
-                        <a href="admin/admin.php">Администрирование</a>
+                        <a href="admin/portfolio/index.php">Администрирование</a>
                     </li>
                     <?php endif; ?>
                     <?php endif; ?>

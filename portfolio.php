@@ -23,21 +23,25 @@ include("app/database/db.php");
 
 <?php include("app/include/header.php"); ?>
 
-
-
-
 <!-- Блок мейн -->
-
-
-
-
-
-
-
-
-
-
-
+<div class="container mt-5">
+    <div class="row">
+        <?php
+        // Получение всех постов из базы данных
+        $posts = selectAll('posts');
+        foreach ($posts as $post): ?>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" class="card-img-top" alt="image">
+                    <div class="card-body">
+                        <p class="card-text"><?php echo $post['text']; ?></p>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<!-- Блок мейн -->
 
 <!-- Footer -->
 <!-- <?php include("app/include/footer.php"); ?> -->
