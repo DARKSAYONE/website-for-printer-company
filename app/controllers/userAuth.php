@@ -44,9 +44,6 @@ $errMsg = ' ';
        $_SESSION['name'] = $user['username'];
        $_SESSION['admin'] = $user['admin'];
 
-       if($_SESSION['admin']){
-        
-       }
        header('location: '. BASE_URL);
 
     }
