@@ -3,7 +3,7 @@
         <div class="footer-content">
             <div class="footer-left">
                 <p>Минеральные Воды</p>
-                <p>ул. Пушкина, Колотушкина</p>
+                <p>ул. Пушкина, дом Колотушкина</p>
             </div>
             <div class="footer-center">
                 <img src="source/img/logo.png" alt="Цифровая Типография" class="footer-logo">
@@ -11,8 +11,8 @@
                 <p>2024 ИП "Name".</p>
             </div>
             <div class="footer-right">
-                <p><a href="tel:8005000691">8 (800) 535345</a> <span class="footer-phone-icon">📞</span></p>
-                <p><a href="mailto:partner@optpoligraf.ru">partner@optpoligraf.ru</a> <span class="footer-email-icon">✉️</span></p>
+                <p><a href="tel:8005000691">8 (800) 535345</a></p>
+                <p><a href="mailto:partner@optpoligraf.ru">partner@optpoligraf.ru</a></p>
             </div>
         </div>
         <?php if(!isset($_SESSION['id'])): ?>

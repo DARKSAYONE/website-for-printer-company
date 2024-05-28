@@ -25,13 +25,13 @@ include("app/database/db.php");
 
 <!-- Блок мейн -->
 <div class="container mt-5">
-    <div class="row">
+    <div class="portfolio-container">
         <?php
         // Получение всех постов из базы данных
         $posts = selectAll('posts');
         foreach ($posts as $post): ?>
-            <div class="col-md-4 mb-4">
-                <div class="card">
+            <div class="portfolio-item">
+                <div class="card border-0">
                     <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" class="card-img-top" alt="image">
                     <div class="card-body">
                         <p class="card-text"><?php echo $post['text']; ?></p>

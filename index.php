@@ -26,34 +26,30 @@ include("app/database/db.php");
 <!-- Блок карусели -->
 <div class="container">
     <div class="row">
-        <h2 class="slider-title">Цифровая Типография предоставляет услуги печати всего чего угодно! Визитки, брошюры, всё это к нам!</h2>
+        <h2 class="slider-title maintext">Добро пожаловать в "Цифровую Типографию"!
+Мы рады приветствовать вас на нашем сайте. Мы предлагаем полный спектр услуг в области печати, обеспечивая высокое качество и оперативное выполнение заказов. Мы специализируемся на печати визиток, брошюр, открыток и многого другого. Наша цель – удовлетворить все потребности наших клиентов, предоставляя современные и качественные решения.</h2>
     </div>
     <div id="carouselExampleCaptions" class="carousel slide">
-        <!-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
         <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="source/img/gkyckriaccentr.webp" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+            <h5>Брошюра</h5>
+            <p>Брошюра для "РРЦ МВ"</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="source/img/kniga.webp" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
+            <h5>Книга "Удивительный мир-насекомых."</h5>
+            <p>Целая книга для Данилова Андрея.</p>
             </div>
         </div>
         <div class="carousel-item">
             <img src="source/img/kalendar.webp" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
+            <h5>Календарь</h5>
+            <p>Календарь под заказ для AAAAAAAAAAAA</p>
             </div>
         </div>
         </div>
@@ -70,50 +66,36 @@ include("app/database/db.php");
 <!-- Блок карусели -->
 <!-- Блок мейн -->
 <div class="container">
-    <div class="container row">
-        <div class="main-content col-md-12">
-        <h2>Название</h2>
-        <div class="post row">
-            <div class="img col-12 col-md-4">
-                <img src="source/img/kniga.webp" alt="" class="img-thumbnail">
+    <div class="row">
+        <div class="main-content col-12">
+            <h2>Почему именно мы?</h2>
+            <div class="row">
+                <div class="img col-12">
+                    <img src="source/img/XXXL.webp" alt="" class="img-thumbnail">
+                </div>
+                <div class="post_text col-12">
+                    <h3>Наша команда состоит из опытных специалистов, которые любят свою работу и всегда готовы предложить креативные и эффективные решения. Мы уверены, что качественная печать – это залог успешного продвижения вашего бизнеса и создания положительного впечатления.
+
+Мы предлагаем широкий спектр услуг, начиная от печати визиток и заканчивая созданием сложных рекламных материалов. Наша типография оснащена современным оборудованием, что позволяет нам выполнять заказы любой сложности в кратчайшие сроки.</h3>
+                </div>
             </div>
-            <div class="post_text col-12 col-md-8">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, doloremque, distinctio sequi repudiandae voluptates magnam illo eos enim perferendis, accusamus nam ullam incidunt vitae magni iure modi animi consequatur? Obcaecati!</h3>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="container row">
-        <div class="main-content col-md-12">
-        <h2>Название</h2>
-        <div class="post row">
-            <div class="img col-12 col-md-4">
-                <img src="source/img/kniga.webp" alt="" class="img-thumbnail">
-            </div>
-            <div class="post_text col-12 col-md-8">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, doloremque, distinctio sequi repudiandae voluptates magnam illo eos enim perferendis, accusamus nam ullam incidunt vitae magni iure modi animi consequatur? Obcaecati!</h3>
-            </div>
-        </div>
         </div>
     </div>
 </div>
 
 
 
-<!-- Блок мейн -->
-
-
-
-
-
-
-
-
-
-
-
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>Часы работы</h2>
+            <p>Понедельник - Пятница: 9:00 - 18:00</p>
+            <p>Суббота: 10:00 - 14:00</p>
+            <p>Воскресенье: Выходной</p>
+            <h3>Звоните в рабочее время</h3>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <?php include("app/include/footer.php"); ?>

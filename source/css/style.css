@@ -27,6 +27,11 @@ a{
     color: inherit;
     
 }
+
+.main-text h2{
+    background-color: #be6704;
+    margin: 0px, 30px;
+}
 /* ------------------------------------------------------------------------ */
 /* HEADER style */
 
@@ -115,6 +120,15 @@ header .col-8 {
 .slider-title{
     text-align: center;
     padding: 30px 0px;
+    background-color: #e67c03;
+    border-radius: 3px;
+    color: #f8f8f8;
+    
+}
+
+
+.main-text h2{
+    margin: 0px, 20px;
 }
 
 .carousel{
@@ -249,14 +263,17 @@ footer a {
 /* Main content */
 .main-content h2{
     margin: 30px 10px !important;
+    text-align: center;
     padding: 10px;
     background: #ff9100;
     color: #f8f8f8;
+    
 }
 
 .main-content {
 background: rgb(255, 255, 255);
 margin-top: 50px;
+text-align: center;
 }
 /* -------------------------------------------------- */
 /* О нас контент */
@@ -290,3 +307,31 @@ margin-top: 50px;
     text-align: center;
 }
 /* -------------------------------------------------- */
+
+/* ---------------Main---------------------- */
+.post_text h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* ---------------Main---------------------- */
+
+/* Портфолио */
+.portfolio-container {
+    column-count: 3;
+    column-gap: 0;
+}
+
+.portfolio-item {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    break-inside: avoid;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* Портфолио */

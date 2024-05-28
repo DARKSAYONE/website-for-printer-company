@@ -26,30 +26,24 @@ include("../../app/database/db.php");
 
 <?php include("../../app/include/admheader.php"); ?>
  <!-- Main -->
+ <div class="col-14">
  <div class="container-fluid editpanel">
     <div class="row">
         <!-- Sidebar -->
         <div class="col-md-3">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <a href="<?php echo BASE_URL . '/admin/dashboard.php'; ?>">Главная</a>
+                    <a href="<?php echo BASE_URL . '/admin/portfolio/index.php'; ?>">Редактирование портфолио.</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="<?php echo BASE_URL . '/admin/users/index.php'; ?>">Пользователи</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="<?php echo BASE_URL . '/admin/posts/index.php'; ?>">Посты</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="<?php echo BASE_URL . '/admin/portfolio/index.php'; ?>">Портфолио</a>
+                <a href="<?php echo BASE_URL . '/admin/portfolio/index.php'; ?>">Редактирование услуг.</a>
                 </li>
             </ul>
         </div>
         <!-- Main content -->
         <div class="col-md-9">
             <div class="button-group">
-                <a href="create.php" class="btn btn-success">Добавить пост</a>
-                <a href="index.php" class="btn btn-primary">Управление постами</a>
+                <a href="create.php" class="btn btn-success">Добавить работу</a>
             </div>
             <h2 class="page-title">Управление портфолио</h2>
             
@@ -80,6 +74,7 @@ include("../../app/database/db.php");
             </table>
         </div>
     </div>
+</div>
 </div>
 <!-- Footer -->
 

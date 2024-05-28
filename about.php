@@ -38,7 +38,7 @@
             <p>Наша компания занимается предоставлением высококачественных услуг в области типографии. Мы стремимся к постоянному совершенствованию и внедрению новейших технологий для обеспечения максимального удовлетворения потребностей наших клиентов.</p>
         </div>
         <div class="col-md-6">
-            <img src="path/to/your/image.jpg" class="img-fluid" alt="О компании">
+            <img src="source/img/tipograph.gif" class="img-fluid" alt="О компании">
         </div>
     </div>
     
@@ -49,7 +49,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="path/to/example_work1.jpg" class="card-img-top" alt="Работа 1">
+                <img src="source/img/rabota1.webp" class="card-img-top" alt="Работа 1">
                 <div class="card-body text-center">
                     <h5 class="card-title">Работа 1</h5>
                     <p class="card-text">Описание работы 1.</p>
@@ -59,7 +59,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="path/to/example_work2.jpg" class="card-img-top" alt="Работа 2">
+                <img src="source/img/rabota2.webp" class="card-img-top" alt="Работа 2">
                 <div class="card-body text-center">
                     <h5 class="card-title">Работа 2</h5>
                     <p class="card-text">Описание работы 2.</p>
@@ -69,7 +69,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <img src="path/to/example_work3.jpg" class="card-img-top" alt="Работа 3">
+                <img src="source/img/rabota3.webp" class="card-img-top" alt="Работа 3">
                 <div class="card-body text-center">
                     <h5 class="card-title">Работа 3</h5>
                     <p class="card-text">Описание работы 3.</p>
