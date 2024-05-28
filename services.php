@@ -4,7 +4,7 @@ include("app/database/db.php");
 ?>
 <!doctype html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Услуги</title>
@@ -17,108 +17,72 @@ include("app/database/db.php");
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Подключение CSS -->
     <link rel="stylesheet" href="source/css/style.css">
-  </head>
-  <body>
+</head>
+<body>
 <!-- header -->
-
 <?php include("app/include/header.php"); ?>
 
-<!-- Блок карусели -->
-<div class="container">
+<!-- Блок мейн -->
+<div class="container mt-5">
     <div class="row">
-        <h2 class="slider-title">Цифровая Типография предоставляет услуги печати всего чего угодно! Визитки, брошюры, всё это к нам!</h2>
-    </div>
-    <div id="carouselExampleCaptions" class="carousel slide">
-        <!-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="source/img/gkyckriaccentr.webp" class="d-block w-100" alt="...">
-            <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
+        <?php
+        $services = selectAll('services');
+        foreach ($services as $service): ?>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="<?php echo BASE_URL . '/assets/images/services/' . $service['image']; ?>" class="card-img-top" alt="service image">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $service['title']; ?></h5>
+                        <p class="card-text"><?php echo $service['description']; ?></p>
+                        <p class="card-text">Цена: <?php echo $service['price']; ?> руб.</p>
+                        <button class="btn btn-primary" onclick="showOrderForm('<?php echo $service['title']; ?>')">Заказать</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img src="source/img/kniga.webp" class="d-block w-100" alt="...">
-            <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="source/img/kalendar.webp" class="d-block w-100" alt="...">
-            <div class="carousel-caption carousel-caption-my d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-            </div>
-        </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
+        <?php endforeach; ?>
     </div>
 </div>
-<!-- Блок карусели -->
-<!-- Блок мейн -->
-<div class="container">
-    <div class="container row">
-        <div class="main-content col-md-12">
-        <h2>Название</h2>
-        <div class="post row">
-            <div class="img col-12 col-md-4">
-                <img src="source/img/kniga.webp" alt="" class="img-thumbnail">
-            </div>
-            <div class="post_text col-12 col-md-8">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, doloremque, distinctio sequi repudiandae voluptates magnam illo eos enim perferendis, accusamus nam ullam incidunt vitae magni iure modi animi consequatur? Obcaecati!</h3>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="container row">
-        <div class="main-content col-md-12">
-        <h2>Название</h2>
-        <div class="post row">
-            <div class="img col-12 col-md-4">
-                <img src="source/img/kniga.webp" alt="" class="img-thumbnail">
-            </div>
-            <div class="post_text col-12 col-md-8">
-                <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus, doloremque, distinctio sequi repudiandae voluptates magnam illo eos enim perferendis, accusamus nam ullam incidunt vitae magni iure modi animi consequatur? Obcaecati!</h3>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
-
-
-
 <!-- Блок мейн -->
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- Форма заказа -->
+<div id="orderFormContainer" class="container mt-5" style="display: none;">
+    <h2>Оформление заказа</h2>
+    <form action="order.php" method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Имя</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Телефон для связи</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Электронная почта</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="comment" class="form-label">Комментарий</label>
+            <textarea class="form-control" id="comment" name="comment"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="service" class="form-label">Услуга</label>
+            <input type="text" class="form-control" id="service" name="service" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
 <!-- Footer -->
 <?php include("app/include/footer.php"); ?>
 <!-- Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+<script>
+function showOrderForm(serviceTitle) {
+    document.getElementById('service').value = serviceTitle;
+    document.getElementById('orderFormContainer').style.display = 'block';
+    window.scrollTo(0, document.getElementById('orderFormContainer').offsetTop);
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
+</body>
 </html>

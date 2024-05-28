@@ -1,6 +1,7 @@
 <?php 
 include("../../path.php");
 include("../../app/database/db.php");
+include("../../app/database/checkadminstat.php");
 
 $id = $_GET['id'];
 $post = selectOne('posts', ['id' => $id]);
@@ -53,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['edit_post'])) {
     <div class="col-8 container-fluid editpanel">
         <div class="row">
             <!-- Sidebar -->
+            <?php include("../admsidebar.php"); ?>
             <!-- Main content -->
             <div class="col-md-9">
                 <h2 class="page-title">Редактировать пост</h2>

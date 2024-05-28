@@ -277,7 +277,17 @@ text-align: center;
 }
 /* -------------------------------------------------- */
 /* О нас контент */
+.text-center h2{
+    background-color: #ff8800d7;
+    color:#f8f8f8;
+    padding: 10px;
+}
 
+.examples{
+    background-color: #ff8800d7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 /* -------------------------------------------------- */
 
 /* Форма реистрации */

@@ -1,6 +1,7 @@
 <?php
 include("../../path.php");
 include("../../app/database/db.php");
+include("../../app/database/checkadminstat.php");
 
 // Проверка, является ли пользователь администратором
 if (!$_SESSION['admin']) {

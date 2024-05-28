@@ -1,4 +1,7 @@
-<?php include("path.php");?>
+<?php 
+include("path.php");
+include("app/database/db.php");
+    ?>
 <!doctype html>
 <html lang="ru">
   <head>
@@ -47,7 +50,8 @@
         <div class="col-12 text-center mb-4">
             <h2>Примеры наших работ</h2>
         </div>
-        <div class="col-md-4">
+ 
+        <div class="col-md-4 examples">
             <div class="card">
                 <img src="source/img/rabota1.webp" class="card-img-top" alt="Работа 1">
                 <div class="card-body text-center">
@@ -57,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 examples">
             <div class="card">
                 <img src="source/img/rabota2.webp" class="card-img-top" alt="Работа 2">
                 <div class="card-body text-center">
@@ -67,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 examples">
             <div class="card">
                 <img src="source/img/rabota3.webp" class="card-img-top" alt="Работа 3">
                 <div class="card-body text-center">
@@ -77,8 +81,10 @@
                 </div>
             </div>
         </div>
-    </div>
+
+    </div>>
 </div>>
+
     
    
 <!-- Блок мейн -->

@@ -1,6 +1,7 @@
 <?php 
 include("../../path.php");
 include("../../app/database/db.php");
+include("../../app/database/checkadminstat.php");
 
 // Проверка отправки формы
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_post'])) {

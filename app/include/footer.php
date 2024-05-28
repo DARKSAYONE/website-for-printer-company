@@ -12,7 +12,7 @@
             </div>
             <div class="footer-right">
                 <p><a href="tel:8005000691">8 (800) 535345</a></p>
-                <p><a href="mailto:partner@optpoligraf.ru">partner@optpoligraf.ru</a></p>
+                <p><a href="mailto:partner@optpoligraf.ru">email@gmail.com</a></p>
             </div>
         </div>
         <?php if(!isset($_SESSION['id'])): ?>
