@@ -1,6 +1,6 @@
 <?php 
 include("path.php");
-include("app/database/db.php");
+include(ROOT_PATH . "/app/database/db.php");
 ?>
 <!doctype html>
 <html lang="ru">
@@ -9,7 +9,6 @@ include("app/database/db.php");
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная</title>
     
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Подключение bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -22,12 +21,12 @@ include("app/database/db.php");
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="source/css/style.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL . 'source/css/style.css'; ?>">
   </head>
   <body>
 <!-- header -->
 
-<?php include("app/include/header.php"); ?>
+<?php include(ROOT_PATH . "/app/include/header.php"); ?>
 
 <!-- Блок карусели -->
 <div class="container">
@@ -38,21 +37,21 @@ include("app/database/db.php");
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="source/img/gkyckriaccentr.webp" class="d-block w-100" alt="...">
+            <img src="<?php echo BASE_URL . 'source/img/gkyckriaccentr.webp'; ?>" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
             <h5>Брошюра</h5>
             <p>Брошюра для "РРЦ МВ"</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="source/img/kniga.webp" class="d-block w-100" alt="...">
+            <img src="<?php echo BASE_URL . 'source/img/kniga.webp'; ?>" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
             <h5>Книга "Удивительный мир-насекомых."</h5>
             <p>Целая книга для Данилова Андрея.</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="source/img/kalendar.webp" class="d-block w-100" alt="...">
+            <img src="<?php echo BASE_URL . 'source/img/kalendar.webp'; ?>" class="d-block w-100" alt="...">
             <div class="carousel-caption carousel-caption-my d-none d-md-block">
             <h5>Календарь</h5>
             <p>Календарь под заказ для AAAAAAAAAAAA</p>
@@ -77,7 +76,7 @@ include("app/database/db.php");
             <h2>Почему именно мы?</h2>
             <div class="row">
                 <div class="img col-12">
-                    <img src="source/img/XXXL.webp" alt="" class="img-thumbnail">
+                    <img src="<?php echo BASE_URL . 'source/img/XXXL.webp'; ?>" alt="" class="img-thumbnail">
                 </div>
                 <div class="post_text col-12">
                     <h3>Наша команда состоит из опытных специалистов, которые любят свою работу и всегда готовы предложить креативные и эффективные решения. Мы уверены, что качественная печать – это залог успешного продвижения вашего бизнеса и создания положительного впечатления.
@@ -89,28 +88,24 @@ include("app/database/db.php");
     </div>
 </div>
 
-
-
-
 <div class="container my-5 worktime">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2>Часы работы <i class="fas fa-chevron-down icon"></i></h2>
-                <p>Понедельник - Пятница: 9:00 - 18:00</p>
-                <p>Суббота: 10:00 - 14:00</p>
-                <p>Воскресенье: Выходной</p>
-                <h3>Звоните в рабочее время</h3>
-            </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>Часы работы <i class="fas fa-chevron-down icon"></i></h2>
+            <p>Понедельник - Пятница: 9:00 - 18:00</p>
+            <p>Суббота: 10:00 - 14:00</p>
+            <p>Воскресенье: Выходной</p>
+            <h3>Звоните в рабочее время</h3>
         </div>
     </div>
+</div>
 
-
-    <script src="source/js/scripts.js"></script>
+<script src="<?php echo BASE_URL . 'source/js/scripts.js'; ?>"></script>
 
 <!-- Footer -->
-<?php include("app/include/footer.php"); ?>
+<?php include(ROOT_PATH . "/app/include/footer.php"); ?>
 <!-- Footer -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 </html>
