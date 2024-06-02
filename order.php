@@ -1,6 +1,7 @@
 <?php 
 include("path.php");
 include("app/database/db.php");
+include("app/controllers/telegram.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = trim($_POST['name']);
@@ -22,7 +23,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         insert('orders', $order);
-        header('Location: ' . BASE_URL . '/index.php?order_success=true');
+
+        // Отправка уведомления в Телеграм
+        $message = "Новый заказ!\nИмя: $name\nТелефон: $phone\nEmail: $email\nКомментарий: $comment\nУслуга: $service";
+        $telegramResponse = sendTelegramMessage($message, $telegramBotToken, $chatId);
+
+        if ($telegramResponse['success']) {
+            header('Location: ' . BASE_URL . '/index.php?order_success=true');
+        } else {
+            // Обработка ошибки при отправке сообщения в Телеграм
+            $errMsg = "Заказ был сохранен, но возникла ошибка при отправке уведомления в Телеграм: " . $telegramResponse['error'];
+            echo $errMsg; // Вывод сообщения об ошибке (можете настроить отображение по-своему)
+        }
     }
 }
 ?>
