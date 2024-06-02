@@ -15,6 +15,10 @@ include("app/database/db.php");
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+     <!-- --------------- -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Подключение CSS -->
     <link rel="stylesheet" href="source/css/style.css">
 </head>
@@ -23,7 +27,7 @@ include("app/database/db.php");
 <?php include("app/include/header.php"); ?>
 
 <!-- Блок мейн -->
-<div class="container mt-5">
+<div class="container mt-5 servicescontent">
     <div class="row">
         <?php
         $services = selectAll('services');
@@ -45,7 +49,7 @@ include("app/database/db.php");
 <!-- Блок мейн -->
 
 <!-- Форма заказа -->
-<div id="orderFormContainer" class="container mt-5" style="display: none;">
+<div id="orderFormContainer" class="container mt-5 servicecontent" style="display: none; padding-top:30px; padding-bottom:30px">
     <h2>Оформление заказа</h2>
     <form action="order.php" method="post">
         <div class="mb-3">
@@ -75,13 +79,7 @@ include("app/database/db.php");
 <?php include("app/include/footer.php"); ?>
 <!-- Footer -->
 
-<script>
-function showOrderForm(serviceTitle) {
-    document.getElementById('service').value = serviceTitle;
-    document.getElementById('orderFormContainer').style.display = 'block';
-    window.scrollTo(0, document.getElementById('orderFormContainer').offsetTop);
-}
-</script>
+<script src="source/js/scripts.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></script>
 </body>

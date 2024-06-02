@@ -2,6 +2,9 @@
  <div class="col-md-3">
             <ul class="list-group">
                 <li class="list-group-item">
+                <a href="<?php echo BASE_URL?>">Главная</a>
+                </li>
+                <li class="list-group-item">
                     <a href="<?php echo BASE_URL . '/admin/portfolio/index.php'; ?>">Редактирование портфолио</a>
                 </li>
                 <li class="list-group-item">
