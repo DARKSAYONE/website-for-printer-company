@@ -1,5 +1,8 @@
-*{
+h1{
     font-family: "Comfortaa", sans-serif;
+}
+*{
+    font-family: "Raleway", sans-serif;
 }
 /* 
 Палитра
@@ -31,6 +34,14 @@ a{
 .main-text h2{
     background-color: #be6704;
     margin: 0px, 30px;
+}
+
+.container{
+    background: #f8f8f8;
+    padding: 0px 50px;
+}
+.header{
+    background: none;
 }
 /* ------------------------------------------------------------------------ */
 /* HEADER style */
@@ -119,11 +130,15 @@ header .col-8 {
 /* SLIDER */
 .slider-title{
     text-align: center;
-    padding: 30px 0px;
-    background-color: #e67c03;
+    padding: 40px 0px;
+    background-color: #ff8800;
     border-radius: 3px;
     color: #f8f8f8;
+    margin-bottom: 0;
     
+}
+.slider-title h2{
+    margin: 20px 0px;
 }
 
 
@@ -270,6 +285,43 @@ footer a {
     
 }
 
+
+
+.worktime h2 {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 20px 20px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+
+.worktime h2 .icon {
+    margin-left: 10px;
+    transition: transform 0.3s ease-out;
+    padding: 20px 0px;
+    padding-left: 30px;
+}
+
+.worktime p, .worktime h3 {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.worktime p.show, .worktime h3.show {
+    display: block;
+    max-height: 100px; /* Убедитесь, что это значение достаточно большое для ваших элементов */
+    opacity: 1;
+}
+
+.worktime h2 .icon.rotate {
+    transform: rotate(180deg);
+}
+
+
 .main-content {
 background: rgb(255, 255, 255);
 margin-top: 50px;
@@ -287,6 +339,10 @@ text-align: center;
     background-color: #ff8800d7;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.aboutustext{
+    font-size: 20px;
 }
 /* -------------------------------------------------- */
 
@@ -330,6 +386,8 @@ text-align: center;
 .portfolio-container {
     column-count: 3;
     column-gap: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .portfolio-item {
@@ -345,3 +403,9 @@ text-align: center;
     display: block;
 }
 /* Портфолио */
+
+/* Услуги */
+.servicescontent{
+    padding-top: 20px;
+}
+/* услуги */

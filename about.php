@@ -15,6 +15,10 @@ include("app/database/db.php");
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+     <!-- --------------- -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Подключение CSS -->
     <link rel="stylesheet" href="source/css/style.css">
   </head>
@@ -36,7 +40,7 @@ include("app/database/db.php");
     
     <!-- Информация о компании -->
     <div class="row mb-5">
-        <div class="col-md-6">
+        <div class="col-md-6 aboutustext">
             <h2>О компании</h2>
             <p>Наша компания занимается предоставлением высококачественных услуг в области типографии. Мы стремимся к постоянному совершенствованию и внедрению новейших технологий для обеспечения максимального удовлетворения потребностей наших клиентов.</p>
         </div>

@@ -1,7 +1,7 @@
 <?php
 ?>
 <header class="container-fluid">
-    <div class="container">
+    <div class="container header">
         <div class="row">
             <div class="col-4">
                 <h1>Цифровая Типография</h1>
